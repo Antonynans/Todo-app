@@ -82,7 +82,7 @@ class NewApp extends Component {
     constructor(){
         super()
         this.state ={
-            isLoggedIn: true
+            isLoggedIn: false
         }
     }
     render(){
@@ -94,7 +94,7 @@ class NewApp extends Component {
         }
         return(
             <div>
-                <h1>you are currently logged {wordDisplay}</h1>
+                <h1>you are currently logged {isLoggedIn}</h1>
             </div>
         )
     }

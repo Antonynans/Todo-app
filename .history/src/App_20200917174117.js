@@ -7,11 +7,11 @@ class App extends Component {
   constructor(){
     super()
     this.state ={
-      todo: TodoData
+      todos: TodoData
     }
   }
   render(){
-    const todoItems = this.state.todo.map(item => <TodoItem key={item.id} item={item}/>)
+
     return(
     <div className="todo-list">
       {todoItems}
@@ -20,5 +20,7 @@ class App extends Component {
     )
   }
 }
+    
+ 
 
 export default App;

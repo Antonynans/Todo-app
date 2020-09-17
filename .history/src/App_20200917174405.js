@@ -11,7 +11,7 @@ class App extends Component {
     }
   }
   render(){
-    const todoItems = this.state.todo.map(item => <TodoItem key={item.id} item={item}/>)
+    const todoItems = this.state.Todo.map(item => <TodoItem key={item.id} item={item}/>)
     return(
     <div className="todo-list">
       {todoItems}

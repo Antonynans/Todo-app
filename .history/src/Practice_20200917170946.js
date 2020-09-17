@@ -27,8 +27,6 @@ class MyApp extends Component {
             <div>
                 <Header username="Antony"/>
                 <Greeting />
-                <App />
-                <NewApp />
             </div>
         )
     }
@@ -45,7 +43,7 @@ class Header extends Component {
 }
 class Greeting extends Component {
     render(){
-        const date = new Date()
+        const data = new Date()
         const hours = date.getHours()
         let timeofday;
 
@@ -59,43 +57,6 @@ class Greeting extends Component {
         }
         return(
             <p>Good {timeofday} to you, sir or madam!</p>
-        )
-    }
-}
-class App extends Component {
-    constructor(){
-        super()
-        this.state ={
-            answer: "yes"
-        }
-    }
-    render(){
-        return(
-            <div>
-                <h1>Is state important to know? {this.state.answer}</h1>
-                <childcomponent>{this.state.answer}</childcomponent>
-            </div>
-        )
-    }
-}
-class NewApp extends Component {
-    constructor(){
-        super()
-        this.state ={
-            isLoggedIn: true
-        }
-    }
-    render(){
-        let wordDisplay
-        if (this.state.isLoggedIn === true) {
-            wordDisplay = "in"
-        } else {
-            wordDisplay = 'out'
-        }
-        return(
-            <div>
-                <h1>you are currently logged {wordDisplay}</h1>
-            </div>
         )
     }
 }

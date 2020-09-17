@@ -27,8 +27,6 @@ class MyApp extends Component {
             <div>
                 <Header username="Antony"/>
                 <Greeting />
-                <App />
-                <NewApp />
             </div>
         )
     }
@@ -63,39 +61,10 @@ class Greeting extends Component {
     }
 }
 class App extends Component {
-    constructor(){
-        super()
-        this.state ={
-            answer: "yes"
-        }
-    }
+    constructor()
     render(){
         return(
-            <div>
-                <h1>Is state important to know? {this.state.answer}</h1>
-                <childcomponent>{this.state.answer}</childcomponent>
-            </div>
-        )
-    }
-}
-class NewApp extends Component {
-    constructor(){
-        super()
-        this.state ={
-            isLoggedIn: true
-        }
-    }
-    render(){
-        let wordDisplay
-        if (this.state.isLoggedIn === true) {
-            wordDisplay = "in"
-        } else {
-            wordDisplay = 'out'
-        }
-        return(
-            <div>
-                <h1>you are currently logged {wordDisplay}</h1>
-            </div>
+
         )
     }
 }
